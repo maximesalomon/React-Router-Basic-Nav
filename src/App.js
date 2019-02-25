@@ -1,18 +1,17 @@
 import React from 'react';
 import './App.css';
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 import { Home, About, Contact, Navigation } from './components';
 
 const App = () => (
-  <Router>
+  <div>
     <Navigation />
-  </Router>
+    <Route exact path="/" component={Home} />
+    <Route path="/about" component={About} />
+    <Route path="/contact" component={Contact} />
+  </div>
 );
 
 export default App;
